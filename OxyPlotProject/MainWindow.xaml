@@ -8,6 +8,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <oxy:PlotView x:Name="PlotView_Sample"  Height="300" Width="600" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,50,0,0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <ListBox x:Name="ListBox_OxyPlotIdNames" SelectionMode="Single" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Width="195" Height="374" SelectionChanged="ListBox_OxyPlotIdNames_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=0}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Item2}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <oxy:PlotView x:Name="PlotView_Sample"  Height="350" Width="500" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+        </Grid>
     </Grid>
 </Window>
