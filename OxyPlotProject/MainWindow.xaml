@@ -8,8 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid Height="300" Width="600" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,50,0,0">
-            <oxy:PlotView x:Name="PlotView_Sample" Height="300"  Width="600"/>
-        </Grid>
+        <oxy:PlotView x:Name="PlotView_Sample"  Height="300" Width="600" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,50,0,0"/>
     </Grid>
 </Window>
