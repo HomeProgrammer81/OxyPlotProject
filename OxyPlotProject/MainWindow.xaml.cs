@@ -26,6 +26,7 @@ namespace OxyPlotProject
             new Tuple<string, string>("legendClickDisabled", "Legend(凡例)のクリック無効"),
             new Tuple<string, string>("yAxisLeftRight", "Y軸を左右に設定"),
             new Tuple<string, string>("xAxisCategoryBar", "X軸カテゴリーにバーを設定"),
+            new Tuple<string, string>("lineBarSame", "ラインとバーを同グラフ"),
         };
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace OxyPlotProject
             {"legendClickDisabled", new LegendClickDisabledPlotModelFactory() },
             {"yAxisLeftRight", new YAxisLeftRightPlotModelFactory() },
             {"xAxisCategoryBar", new XAxisBarPlotModelFactory() },
+            {"lineBarSame", new LineBarSamePlotModelFactory() },
         };
 
         public MainWindow()
