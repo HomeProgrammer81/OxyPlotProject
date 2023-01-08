@@ -23,7 +23,7 @@ namespace OxyPlotProject
         /// </remarks>
         private readonly ObservableCollection<Tuple<string, string>> IdNames = new ObservableCollection<Tuple<string, string>>()
         {
-            new Tuple<string, string>("legendClickDisable", "Legend(凡例)のクリック無効")
+            new Tuple<string, string>("legendClickDisabled", "Legend(凡例)のクリック無効")
         };
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace OxyPlotProject
         /// </remarks>
         private readonly Dictionary<string, AbstPlotModelFactory> PlotModelFactoryTable = new Dictionary<string, AbstPlotModelFactory>()
         {
-            {"legendClickDisable", new LegendClickDisablePlotModelFactory() },
+            {"legendClickDisabled", new LegendClickDisabledPlotModelFactory() },
         };
 
         public MainWindow()

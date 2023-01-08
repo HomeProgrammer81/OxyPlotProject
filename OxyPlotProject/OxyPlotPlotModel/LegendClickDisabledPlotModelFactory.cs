@@ -8,7 +8,7 @@ namespace OxyPlotProject.OxyPlotPlotModel
     /// <summary>
     /// 凡例クリック無効PlotModelファクトリー
     /// </summary>
-    internal class LegendClickDisablePlotModelFactory : AbstPlotModelFactory
+    internal class LegendClickDisabledPlotModelFactory : AbstPlotModelFactory
     {
         public override PlotModel Create()
         {
@@ -40,6 +40,7 @@ namespace OxyPlotProject.OxyPlotPlotModel
             // 凡例
             Legend legend = new Legend();
             legend.LegendSymbolLength = 30;
+            legend.ShowInvisibleSeries = false;
             plotModel.Legends.Add(legend);
 
             return plotModel;
