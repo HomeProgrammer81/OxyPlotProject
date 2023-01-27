@@ -13,7 +13,7 @@ namespace OxyPlotProject.OxyPlotPlotModel
     {
         private List<Tuple<string, double>> pieDataList = new List<Tuple<string, double>>()
         {
-            new Tuple<string, double>( "商品A", 20394),
+            new Tuple<string, double>( "商品A", 25394),
             new Tuple<string, double>( "商品B", 20343),
             new Tuple<string, double>( "商品C", 15400),
             new Tuple<string, double>( "商品D", 10200),
@@ -33,7 +33,7 @@ namespace OxyPlotProject.OxyPlotPlotModel
             pieSeries.InsideLabelColor = OxyColors.White;   // 内部ラベルの色
             pieSeries.InsideLabelPosition = 0.7;            // 内部ラベル位置
 
-            pieSeries.FontSize = 20;                        // フォントサイズ
+            pieSeries.FontSize = 18;                        // フォントサイズ
 
             pieSeries.Stroke = OxyColors.WhiteSmoke;        // ボーダーの色
             pieSeries.StrokeThickness = 3;                  // ボーダーの幅
