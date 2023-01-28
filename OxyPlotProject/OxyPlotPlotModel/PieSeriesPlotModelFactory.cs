@@ -1,5 +1,4 @@
 ﻿using OxyPlot;
-using OxyPlot.Legends;
 using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
@@ -50,13 +49,14 @@ namespace OxyPlotProject.OxyPlotPlotModel
             pieSeries.TickDistance = 4;                     // 円の端と、割合の線の距離
 
             pieSeries.StartAngle = -90;                     // データの開始角度
-            pieSeries.ExplodedDistance = 0.1;
+            pieSeries.ExplodedDistance = 0.1;               // 円の中心からの距離
+
             // データ設定
-            foreach( Tuple<string, double, bool, OxyColor> tuple in PieSliceList)
+            foreach ( Tuple<string, double, bool, OxyColor> tuple in PieSliceList)
             {
                 PieSlice pieSlice = new PieSlice(tuple.Item1, tuple.Item2);
-                pieSlice.IsExploded = tuple.Item3;
-                pieSlice.Fill = tuple.Item4;
+                pieSlice.IsExploded = tuple.Item3;          // 強調するときはtrue
+                pieSlice.Fill = tuple.Item4;                // 強調するときは色を変える
 
                 pieSeries.Slices.Add(pieSlice);
             }
