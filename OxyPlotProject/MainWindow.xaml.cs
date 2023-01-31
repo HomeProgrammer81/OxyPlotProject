@@ -24,6 +24,8 @@ namespace OxyPlotProject
         private readonly ObservableCollection<Tuple<string, string>> IdNames = new ObservableCollection<Tuple<string, string>>()
         {
             new Tuple<string, string>("pie", "円グラフ"),
+            new Tuple<string, string>("piecut", "円グラフ-一部強調"),
+            new Tuple<string, string>("piedouble", "円グラフ-二重"),
             new Tuple<string, string>("legendClickDisabled", "Legend(凡例)のクリック無効"),
             new Tuple<string, string>("yAxisLeftRight", "Y軸を左右に設定"),
             new Tuple<string, string>("xAxisCategoryBar", "X軸カテゴリーにバーを設定"),
@@ -40,6 +42,8 @@ namespace OxyPlotProject
         private readonly Dictionary<string, AbstPlotModelFactory> PlotModelFactoryTable = new Dictionary<string, AbstPlotModelFactory>()
         {
             {"pie", new PieSeriesPlotModelFactory() },
+            {"piecut", new PieSeriesCutPlotModelFactory() },
+            {"piedouble", new PieSeriesDoublePlotModelFactory() },
             {"legendClickDisabled", new LegendClickDisabledPlotModelFactory() },
             {"yAxisLeftRight", new YAxisLeftRightPlotModelFactory() },
             {"xAxisCategoryBar", new XAxisBarPlotModelFactory() },
