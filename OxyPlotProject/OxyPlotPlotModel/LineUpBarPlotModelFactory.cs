@@ -72,7 +72,7 @@ namespace OxyPlotProject.OxyPlotPlotModel
 
             // 2022年 売上
             BarSeries barSeries2 = new BarSeries();
-            barSeries2.Title = "2021年";
+            barSeries2.Title = "2022年";
             barSeries2.XAxisKey = "yAxis";
             barSeries2.YAxisKey = "xAxis";
             barSeries2.FillColor = OxyColors.Green;
